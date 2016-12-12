@@ -1,0 +1,6 @@
+LD F1, 0($1)
+LD F2, 0($1)
+LD F3, 0($2)
+LD F4, 2($4)
+ADD.D F2, F3, F4
+DIV.D  F2, F2, F4
