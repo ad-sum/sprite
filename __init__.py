@@ -26,7 +26,7 @@ global FINISH # stores the wite-back number for the final instruction
 global cal_com
 global reg_in_use # stores the cycle number when each register will become available
 global rob # number of re-order buffers
-rob = 5
+rob = input("please enter the number of ROB:")
 reg_in_use = [0]*31
 FINISH = []
 cal_com = []
@@ -36,21 +36,18 @@ ISSUE = [1]
 memory = [45,12,0,0,10,135,254,127,18,4,55,8,2,98,13,5,233,158,167] # memory values Ivan gave us in the project
 reg = [5]*31
 last_use = [0]*31
-re_load = 2
-re_save = 5
-re_add = 5
-re_mult = 5
-re_div = 5
-re_add = [0]*31
-re_mult = [0]*31
-re_div = [0]*31
+re_load = input("please enter the number of reservation stations for load:")
+re_save = input("please enter the number of reservation stations for save:")
+re_add = input("please enter the number of reservation stations for add:")
+re_mult = input("please enter the number of reservation stations for mult:")
+re_div = input("please enter the number of reservation stations for division:")
 FT = [0]*31
-k_load = 10+1 
-k_save = 2+1
-k_add = 3+1
-k_branch = 3+1
-k_mul = 7+1
-k_div = 40+1
+k_load = input("please enter the cycle number which takes to complete load:")
+k_save = input("please enter the cycle number which takes to complete save:")
+k_add = input("please enter the cycle number which takes to complete add:")
+k_branch = input("please enter the cycle number which takes to complete branch:")
+k_mul = input("please enter the cycle number which takes to complete mult:")
+k_div = input("please enter the cycle number which takes to complete div:")
 commit = 0
 iss = []
 flag = 0
@@ -370,7 +367,7 @@ while z:
         elif wat_do[i] == "BNE":
             bne(instruct)
         else :
-            k = 'k'+str(2) #cast -JK
+            k = 'k'+2
     except IOError:
         print ("instruction not preset : Error loading the instruction, compile Error")
     i = i+1
@@ -382,5 +379,5 @@ print ("Issue"+str(iss))
 print ("Finish time"+str(cal_com))
 print ("WB time"+str(FINISH))
 print ("Commit time"+str(COMMIT))
-print ("FP regester"+str(FT))
-print ("Int regester"+str(reg))
+print ("FP register"+str(FT))
+print ("Int register"+str(reg))
