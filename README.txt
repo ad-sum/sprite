@@ -1,9 +1,9 @@
 Run this script on a Ubuntu VM with Python 2.7
 1.Open terminal
 2.Using text editor, enter desired MIPS instuctions into instructions.txt  
-3.Copy instructions.txt and sprite_final.py into desired directory (cp ~/)
-4.Navigate to the directory containing instruction.txt and sprite_final.py  (cd ~/)
-5.Once in appropriate directory, enter the following command into the terminal: "python sprite_final.py"
+3.Copy instructions.txt and __init__.py into desired directory (cp ~/)
+4.Navigate to the directory containing instruction.txt and __init__.py  (cd ~/)
+5.Once in appropriate directory, enter the following command into the terminal: "python __init__.py"
 6.Program is now executing in terminal and awaiting user input
 7.Follow instructions listed in terminal to finish program execution
 
