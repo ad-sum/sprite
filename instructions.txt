@@ -3,6 +3,3 @@ LD F2, 0($1)
 LD F3, 0($2)
 LD F4, 2($4)
 ADD.D F2, F3, F4
-SUB.D F1, F2, F3
-SUB.I F1, F2, 5
-BEQ $2, $3, 2
